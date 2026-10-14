@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelompok 1 - XI TJKT 3</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #eef4ff;
+      color: #000000;
+    }
+    nav {
+      background: white; padding: 20px; display: flex;
+      justify-content: space-between; align-items: center;
+    }
+    button {
+      background: #25eb2b;
+      color: hwb(0 13% 0%);
+      border: none;
+      padding: 10px;
+      border-radius: 8px; cursor: pointer;
+      
+    }
+    header {
+      background: #405074;
+      color: white;
+      text-align: center; padding: 40px 15px;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #60e92a;
+    }
+    .anggota {
+      display: grid;
+      grid-template-columns: 1fr 1fr; gap: 15px;
+    }
+    .card {
+      background: white;
+      padding: 20px; border-radius: 12px; margin-bottom: 15px; 
+      box-shadow: 0 3px 8px #0002;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    #pesan {
+      display: none;
+      color: #ec4899
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+    dark {
+      background: #0f172a;
+      color: white;
+    }
+    .dark nav,
+    .dark .card {
+      background: #f999ff;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      .anggota {
+        grid-template-columns: 1fr
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th, td {
+      border: 2px solid #4d4d4d;
+      padding: 12px;
+    }
+    th {
+      background: #ee74c9;
+      color: hwb(0 11% 66%);
+    }
+    tr:hover {
+      background: #dbeafe;
+      color: #2c425f;
+    }
+    .gambar Qoutes {
+      width: 100%;
+      height: auto;
+      border-radius: 12px; display: block;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <mark>Kelompok 1 XI TJKT 3</mark>
+    <button onclick="gantistyle()"><i>🌙 style</i></button>
+  </nav>
+  <header>
+    <h1>Our Awesome Team</h1>
+    <p><i>Kelompok 1</i></p>
+    <p>Empat orang, Satu tujuan.</p>
+    <p><em>Biarkan Kelompok Kami Yang Memasak</em></p>
+  </header>
+  <main>
+    <h2>⚽ Favorit Sepak Bola</h2>
+    <div class="card">
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Pemain Bola Favorite</th>
+          <th>Club Bola</th>
+        </tr>
+        <tr>
+          <td>Fahri Faisal</td>
+          <td>Kylian Mbappe</td>
+          <td>Real Madrid</td>   
+        </tr>
+        <tr>
+          <td>Rusli</td>
+          <td>Lionel Messi</td>
+          <td>Barcelona</td>
+        </tr>
+        <tr>
+          <td>Rendi Ardiansyah</td>
+          <td>Ronaldo</td>
+          <td>Real Madrid</td>
+        </tr>
+        <tr>
+          <td>Dirgam Andira Putra</td>
+          <td>Neymar Jr</td>
+          <td>PSG</td>
+        </tr>
+      </table>
+      
+    </div>
+    <h2>👥 Anggota Kelompok</h2>
+    <div class="anggota">
+      <div class="card">
+        <h3 onclick="TampilanPesan()"style="cursor:pointer">
+          👨‍💻 Fahri Faisal
+        </h3>
+        <p><sb>XI TJKT 3</sb></p>
+        <p>Hobi: Belajar</p>
+        
+        <p id="pesan">❤️Like Like Isyra❤️</p>
+      </div>
+      <div class="card">
+        <h3>⚽ Rendi Ardiansyah</h3>
+        <p><sup>XI TJKT 3</sup></p>
+        <p>Hobi: Sepak bola</p>
+        
+      </div>
+      <div class="card">
+        <h3>🎧 Rusli </h3>
+        <p><sup>XI TJKT 3</sup></p>
+        <p>Hobi: Main Musik</p>
+        
+      </div>
+      <div class="card">
+        <h3>🧑🏻‍🔧 Dirgam Andira Putra</h3>
+        <p><sup>XI TJKT 3</sup></p>
+        <p>Hobi: Modif Motor</p>
+        
+      </div>
+      
+    </div>
+    <h2>🎯 Visi Kami</h2>
+        <div class="card">
+            <p>Menjadi kelompok yang kompak,
+            kreatif, dan bertanggung jawab.</p>
+        </div>
+
+        <h2>🚀 Misi Kami</h2>
+        <div class="card">
+            <p>Belajar bersama, saling membantu,
+            dan menyelesaikan tugas dengan baik.</p>
+        </div>
+    <footer>
+      <div class="card">
+        <h3 onclick="TampilanPesan()"style="cursor:pointer">
+          ✨Qoutes✨
+        </h3>
+        <div class="card">
+          <img src="jpg.png" alt="Qoutes Motivasi" class="gambar Qoutes"
+        </div>
+      </div>
+    </footer>
+    <script>
+        function gantistyle() {
+            document.body.classList.toggle("dark");
+        }
+
+        function TampilanPesan() {
+            var pesan = document.getElementById("pesan");
+
+            if (pesan.style.display == "block") {
+                pesan.style.display = "none";
+            } else {
+                pesan.style.display = "block";
+            }
+        }
+    </script>
+    
+
+  </main>
+</body>
+</html>
